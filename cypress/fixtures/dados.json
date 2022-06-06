@@ -1,0 +1,52 @@
+[
+    {
+        "idGrupo": 39,
+        "nivel": 0,
+        "nomeAgrupamento": "Eletronicos",
+        "descricao": "Eletronicos",
+        "pai": 1,
+        "podeAgrupar": false,
+        "posicao": 0,
+        "path": "39"
+    },
+    {
+        "idGrupo": 1,
+        "nivel": 0,
+        "nomeAgrupamento": "Grupo 1",
+        "descricao": "Grupo 1",
+        "pai": 1,
+        "podeAgrupar": false,
+        "posicao": 0,
+        "path": "1"
+    },
+    {
+        "idGrupo": 2,
+        "nivel": 0,
+        "nomeAgrupamento": "Grupo 2",
+        "descricao": "Grupo 2",
+        "pai": 1,
+        "podeAgrupar": false,
+        "posicao": 0,
+        "path": "2"
+    },
+    {
+        "idGrupo": 2,
+        "nivel": 0,
+        "nomeAgrupamento": "Grupo 2",
+        "descricao": "Grupo 2",
+        "pai": 1,
+        "podeAgrupar": false,
+        "posicao": 0,
+        "path": "2"
+    },
+    {
+        "idGrupo": 2,
+        "nivel": 0,
+        "nomeAgrupamento": "Grupo 2",
+        "descricao": "Grupo 2",
+        "pai": 1,
+        "podeAgrupar": false,
+        "posicao": 0,
+        "path": "2"
+    }
+]
