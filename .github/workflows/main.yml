@@ -17,8 +17,6 @@ jobs:
 
       - name: Run end-to-end tests on tablet viewport 🧪
         uses: cypress-io/github-action@v2
-        env :
-           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}  
         with:
           command: npm run test:cadastro
       - name: Upload a Build Artifact
