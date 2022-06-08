@@ -63,7 +63,7 @@ describe('Cadastro de Grupo', () => {
     });
 
 
-    it('Quando não existir Grupos cadastrado na base, então o botão criar Grupo deve ser exibido', () => {
+    it.only('Quando não existir Grupos cadastrado na base, então o botão criar Grupo deve ser exibido', () => {
         cy.intercept('GET', '/koopon-produto-rest-api/grupos',
             { fixture: 'vazio' }
         ).as('dados-grupo')
