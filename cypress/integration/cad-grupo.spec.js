@@ -7,17 +7,7 @@ import assert from '../support/api/asserts'
 describe('Cadastro de Grupo', () => {
     beforeEach(() => {
         cy.login()
-        Cypress.on('uncaught:exception', (err, runnable, promise) => {
-            // when the exception originated from an unhandled promise
-            // rejection, the promise is provided as a third argument
-            // you can turn off failing the test in this case
-            if (promise) {
-              return false
-            }
-            // we still want to ensure there are no other unexpected
-            // errors, so we let them fail the test
-          })
-
+    
     });
 
     Cypress._.times(1, () => {
@@ -63,7 +53,7 @@ describe('Cadastro de Grupo', () => {
     });
 
 
-    it.only('Quando não existir Grupos cadastrado na base, então o botão criar Grupo deve ser exibido', () => {
+    it('Quando não existir Grupos cadastrado na base, então o botão criar Grupo deve ser exibido', () => {
         cy.intercept('GET', '/koopon-produto-rest-api/grupos',
             { fixture: 'vazio' }
         ).as('dados-grupo')
