@@ -1,29 +1,27 @@
-
-
-name: Node.js Package
+name: ci
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
-  build:
+  
+  cypress-tests-cadastro:
     runs-on: ubuntu-latest
+    container: cypress/browsers:node16.13.x-chrome87-ff82
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
+      - name: Checkout
+        uses: actions/checkout@v3
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        
+      - name: Run end-to-end tests on tablet viewprt 🧪
+        uses: cypress-io/github-action@v3
+        with:
+          command: npm run test:cadastro
+      - name: Upload a Build Artifact
+        if: always()
+        uses: actions/upload-artifact@v3.2.4
+        with:
+          path: cypress/videos
+          
