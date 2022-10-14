@@ -21,7 +21,14 @@ jobs:
           command: npm run test:cadastro
       - name: Upload a Build Artifact
         if: always()
-        uses: actions/upload-artifact@v3.2.4
+        uses: actions/upload-artifact@v2.2.4
         with:
           path: cypress/videos
           
+ 
+          
+  
+          
+ 
+          
+  
