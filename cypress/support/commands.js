@@ -7,6 +7,7 @@ Cypress.Commands.add('login', (
   ) => {
     cy.session([username, password], () => {
         onBeforeLoad: window.localStorage.setItem('CHAVE_NAOEXIBIR_TOAST_VENCIMENTO_CERTIFICADO', 'true')
+         onBeforeLoad: window.localStorage.setItem('ULTIMA_EXIBICAO_NOVIDADES', '14/10/2022')
       cy.request({
         method: 'POST',
         url: '/passaporte-rest-api/rest/login',
