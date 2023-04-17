@@ -10,14 +10,15 @@ jobs:
   
   cypress-tests-cadastro:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
+    
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Run end-to-end tests on tablet viewport 🧪
-        uses: cypress-io/github-action@v2
+      - name: Run end-to-end tests on tablet viewprt 🧪
+        uses: cypress-io/github-action@v3
         with:
+          node-version: 16
           command: npm run test:cadastro
       - name: Upload a Build Artifact
         if: always()
