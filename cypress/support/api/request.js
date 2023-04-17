@@ -14,10 +14,8 @@ class Request {
 
         })
     }
-
     getDeleteGrupo(response) {
         const id = response.body.idGrupo
-
         return cy.request({
             method: 'DELETE',
             url: `/koopon-produto-rest-api/grupos/${id}`,
@@ -27,7 +25,6 @@ class Request {
         })
 
     }
-
     getCriarAdmCartaoSemDados() {
         return cy.request({
             method: 'POST',
@@ -43,22 +40,15 @@ class Request {
 
         })
     }
-
     DeleteGrupoMovimentada(response) {
-
-
         return cy.request({
             method: 'DELETE',
-            url: `/koopon-produto-rest-api/grupos/6`,
+            url: `/koopon-produto-rest-api/grupos/1`,
 
             failOnStatusCode: false
 
         })
 
     }
-
-
 }
-
-
 export default new Request();
