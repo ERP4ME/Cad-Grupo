@@ -4,7 +4,6 @@ import assert from '../support/api/asserts'
 describe('Cadastro de Grupo', () => {
     beforeEach(() => {
         cy.login()
-    
     });
     Cypress._.times(1, () => {
         it('Quando realizar uma busca, então a busca deve ser realizada com suceso', () => {
