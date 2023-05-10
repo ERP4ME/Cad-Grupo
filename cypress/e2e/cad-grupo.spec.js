@@ -27,7 +27,7 @@ describe('Cadastro de Grupo', () => {
         });
 
     });
-    it('Ao realizar uma localização de Grupo, o grupo deve ser localizado e não deve exibir que o Grupo não foi localizado', () => {
+    it('Ao realizar uma localização de Grupo, o grupo deve ser localizado e não deve exibir que o Grupo não foi localizado.', () => {
         cy.AcessarGrupo()
         cy.intercept({
             method: 'GET',
