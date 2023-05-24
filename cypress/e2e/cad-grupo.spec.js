@@ -6,7 +6,7 @@ describe('Cadastro de Grupo', () => {
         cy.login()
     });
     Cypress._.times(1, () => {
-        it('Quando realizar uma busca, então a busca deve ser realizada com suceso', () => {
+        it('Quando realizar uma busca, então a busca deve ser realizada com suceso,', () => {
             cy.intercept({
                 method: 'GET',
                 path: '/koopon-produto-rest-api/grupos',
